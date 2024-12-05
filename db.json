@@ -1,0 +1,54 @@
+{
+  "movies": [
+    {
+      "title": "Galactic Odyssey",
+      "genre": "Science-Fiction",
+      "release_date": "2025-07-15",
+      "budget": "200 million USD",
+      "synopsis": "In a distant future, a team of explorers ventures into the unknown corners of the galaxy to find a new home for humanity.",
+      "directors": ["Jane Anderson"],
+      "producers": ["Michael Lee", "Sarah Connor"],
+      "status": "In Production"
+    },
+    {
+      "title": "Love in the Chaos",
+      "genre": "Drama",
+      "release_date": "2024-03-10",
+      "budget": "35 million USD",
+      "synopsis": "A couple fights to rebuild their relationship amidst the chaos of a global crisis.",
+      "directors": ["Emma Roberts"],
+      "producers": ["Jack Martin"],
+      "status": "Postproduction"
+    },
+    {
+      "title": "The Last Heist",
+      "genre": "Action",
+      "release_date": "2024-12-20",
+      "budget": "50 million USD",
+      "synopsis": "A group of retired thieves comes out of retirement for one final job, only to find out they're being double-crossed.",
+      "directors": ["Luke Carter"],
+      "producers": ["Diana Stone", "Rick Sanchez"],
+      "status": "Completed"
+    },
+    {
+      "title": "Laughing Matters",
+      "genre": "Comedy",
+      "release_date": "2025-05-01",
+      "budget": "20 million USD",
+      "synopsis": "A failing stand-up comedian accidentally becomes an internet sensation.",
+      "directors": ["Chris Young"],
+      "producers": ["Megan Fox"],
+      "status": "Pre-production"
+    },
+    {
+      "title": "Eclipse",
+      "genre": "Thriller",
+      "release_date": "2024-10-31",
+      "budget": "80 million USD",
+      "synopsis": "A solar eclipse triggers a series of murders in a small town, and a detective races against time to solve the mystery.",
+      "directors": ["Sophia Grant"],
+      "producers": ["Oliver Blake", "Nina Harper"],
+      "status": "In Production"
+    }
+  ]
+}
