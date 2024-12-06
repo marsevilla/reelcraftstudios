@@ -1,28 +1,48 @@
 <h2>Add New Movie</h2>
-<form (ngSubmit)="addMovie()">
+<form [formGroup]="movieForm" (ngSubmit)="addMovie()">
   <div>
     <label for="title">Title</label>
-    <input type="text" id="title" [(ngModel)]="newMovie.title" name="title" required>
+    <input id="title" type="text" formControlName="title">
+    <div *ngIf="movieForm.get('title')?.invalid && movieForm.get('title')?.touched">
+      <small *ngIf="movieForm.get('title')?.errors?.['required']">Title is required.</small>
+      <small *ngIf="movieForm.get('title')?.errors?.['minlength']">Title must be at least 2 characters.</small>
+    </div>
   </div>
   <div>
     <label for="realisator">Realisator</label>
-    <input type="text" id="realisator" [(ngModel)]="newMovie.realisator" name="realisator" required>
+    <input id="realisator" type="text" formControlName="realisator">
+    <div *ngIf="movieForm.get('realisator')?.invalid && movieForm.get('realisator')?.touched">
+      <small>Realisator is required.</small>
+    </div>
   </div>
   <div>
     <label for="releaseDate">Release Date</label>
-    <input type="date" id="releaseDate" [(ngModel)]="newMovie.releaseDate" name="releaseDate" required>
+    <input id="releaseDate" type="date" formControlName="releaseDate">
+    <div *ngIf="movieForm.get('releaseDate')?.invalid && movieForm.get('releaseDate')?.touched">
+      <small>Release Date is required.</small>
+    </div>
   </div>
   <div>
     <label for="genre">Genre</label>
-    <input type="text" id="genre" [(ngModel)]="newMovie.genre" name="genre" required>
+    <input id="genre" type="text" formControlName="genre">
+    <div *ngIf="movieForm.get('genre')?.invalid && movieForm.get('genre')?.touched">
+      <small>Genre is required.</small>
+    </div>
   </div>
   <div>
     <label for="status">Status</label>
-    <input type="text" id="status" [(ngModel)]="newMovie.status" name="status" required>
+    <input id="status" type="text" formControlName="status">
+    <div *ngIf="movieForm.get('status')?.invalid && movieForm.get('status')?.touched">
+      <small>Status is required.</small>
+    </div>
   </div>
   <div>
     <label for="synopsis">Synopsis</label>
-    <textarea id="synopsis" [(ngModel)]="newMovie.synopsis" name="synopsis" required></textarea>
+    <textarea id="synopsis" formControlName="synopsis"></textarea>
+    <div *ngIf="movieForm.get('synopsis')?.invalid && movieForm.get('synopsis')?.touched">
+      <small *ngIf="movieForm.get('synopsis')?.errors?.['required']">Synopsis is required.</small>
+      <small *ngIf="movieForm.get('synopsis')?.errors?.['minlength']">Synopsis must be at least 10 characters.</small>
+    </div>
   </div>
-  <button type="submit">Add Movie</button>
+  <button type="submit" [disabled]="movieForm.invalid">Add Movie</button>
 </form>

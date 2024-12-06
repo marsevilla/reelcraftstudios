@@ -97,6 +97,16 @@
       "genre": "drama",
       "status": "onprod",
       "synopsis": "bonjour"
+    },
+    {
+      "id": "0",
+      "title": "hola",
+      "realisator": "hola",
+      "releaseDate": "2025-01-05",
+      "budget": 0,
+      "genre": "hola",
+      "status": "hola",
+      "synopsis": "hola"
     }
   ]
 }

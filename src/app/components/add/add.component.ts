@@ -1,23 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Movie } from '../../../models/movie.model';
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
+import { Movie } from '../../../models/movie.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add',
-  standalone: true, // Declare as a standalone component
-  imports: [FormsModule], // Import required modules here
   templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  styleUrls: ['./add.component.css'],
+  imports: [CommonModule, ReactiveFormsModule],
 })
 export class AddComponent {
-  newMovie: Movie = { id: '0', title: '', realisator: '', releaseDate: new Date(), budget: 0, genre: '', status: '', synopsis: '' };
+  movieForm: FormGroup;
 
-  constructor(private movieService: MovieService) {}
+  constructor(private fb: FormBuilder, private movieService: MovieService) {
+    this.movieForm = this.fb.group({
+      title: ['', [Validators.required, Validators.minLength(2)]],
+      realisator: ['', [Validators.required]],
+      releaseDate: ['', [Validators.required]],
+      genre: ['', [Validators.required]],
+      status: ['', [Validators.required]],
+      synopsis: ['', [Validators.required, Validators.minLength(10)]],
+    });
+  }
 
   addMovie(): void {
-    this.movieService.addMovie(this.newMovie).subscribe(response => {
-      console.log('Movie added:', response);
-    });
+    if (this.movieForm.valid) {
+      const newMovie: Movie = this.movieForm.value;
+      this.movieService.addMovie(newMovie).subscribe(response => {
+        console.log('Movie added:', response);
+      });
+    } else {
+      console.error('Form is invalid');
+    }
   }
 }
