@@ -4,6 +4,12 @@
     <label for="title">Title</label>
     <input id="title" formControlName="title" type="text" />
 
+    <label for="director">Director</label>
+    <input id="director" formControlName="director" type="text" />
+
+    <label for="budget">Budget</label>
+    <input id="budget" formControlName="budget" type="number" />
+
     <label for="realisator">Realisator</label>
     <input id="realisator" formControlName="realisator" type="text" />
 
@@ -18,6 +24,8 @@
 
     <label for="synopsis">Synopsis</label>
     <textarea id="synopsis" formControlName="synopsis"></textarea>
+
+    <label for=""></label>
 
     <button type="submit" [disabled]="movieForm.invalid">Update Movie</button>
   </form>

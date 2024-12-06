@@ -25,6 +25,8 @@ export class ModifyComponent implements OnInit {
   ) {
     this.movieForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2)]],
+      director: ['', [Validators.required, Validators.minLength(2)]],
+      budget: ['', [Validators.required, Validators.min(0)]],
       realisator: ['', [Validators.required, Validators.minLength(2)]],
       releaseDate: ['', [Validators.required]],
       genre: ['', [Validators.required]],
@@ -35,9 +37,11 @@ export class ModifyComponent implements OnInit {
 
   ngOnInit(): void {
     // Fetch the movie ID from the route parameters
-    this.movieId = this.route.snapshot.paramMap.get('id');
+    console.log('Fetched movie ID:', this.movieId); // Debugging line
     if (this.movieId) {
       this.loadMovie(this.movieId);
+    } else {
+      console.error('Movie ID not found in route parameters');
     }
   }
 

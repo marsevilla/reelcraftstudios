@@ -3,9 +3,10 @@ export interface Movie {
   id: string;
   title: string;
   genre: string;
+  director: string[];
   status: string;
-  releaseDate: Date
-  realisator: string;
+  releaseDate: string;
+  realisator: string[];
   budget: number;
   synopsis: string;
 }

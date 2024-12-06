@@ -19,6 +19,15 @@
   </div>
 
   <div>
+    <label for="budget">Budget</label>
+    <input id="budget" type="text" formControlName="budget">
+    <div *ngIf="movieForm.get('budget')?.invalid && movieForm.get('budget')?.touched">
+      <small *ngIf="movieForm.get('budget')?.errors?.['required']">Budget is required.</small>
+      <small *ngIf="movieForm.get('budget')?.errors?.['minlength']">Budget is required.</small>
+    </div>
+  </div>
+
+  <div>
     <label for="releaseDate">Release Date</label>
     <input id="releaseDate" type="date" formControlName="releaseDate">
     <div *ngIf="movieForm.get('releaseDate')?.invalid && movieForm.get('releaseDate')?.touched">
