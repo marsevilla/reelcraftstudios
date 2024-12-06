@@ -1,2 +1,24 @@
-<p>modify works!</p>
+<div class="modify-movie">
+  <h2>Modify Movie</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="updateMovie()">
+    <label for="title">Title</label>
+    <input id="title" formControlName="title" type="text" />
 
+    <label for="realisator">Realisator</label>
+    <input id="realisator" formControlName="realisator" type="text" />
+
+    <label for="releaseDate">Release Date</label>
+    <input id="releaseDate" formControlName="releaseDate" type="date" />
+
+    <label for="genre">Genre</label>
+    <input id="genre" formControlName="genre" type="text" />
+
+    <label for="status">Status</label>
+    <input id="status" formControlName="status" type="text" />
+
+    <label for="synopsis">Synopsis</label>
+    <textarea id="synopsis" formControlName="synopsis"></textarea>
+
+    <button type="submit" [disabled]="movieForm.invalid">Update Movie</button>
+  </form>
+</div>

@@ -1,11 +1,17 @@
 
 @for (movie of movies; track movie.id) {
   <div>
+    <h1>Reelcraft Studios</h1>
+    <button>Add new movie</button>
     <h2>{{ movie.title }}</h2>
     <p><strong>Genre:</strong> {{ movie.genre }}</p>
     <p><strong>Status:</strong> {{ movie.status }}</p>
     <p><strong>Release Date:</strong> {{ movie.releaseDate }}</p>
     <p><strong>Synopsis:</strong> {{ movie.synopsis }}</p>
+    <p><strong>Realisator: </strong> {{ movie.realisator }}</p>
+    <p><strong>Budget: </strong> {{ movie.budget }}</p>
+    <button>Modify</button>
+    <button>Delete</button>
   </div>
 }
 @empty {

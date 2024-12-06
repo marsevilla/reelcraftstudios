@@ -7,7 +7,7 @@ import { Movie } from '../../models/movie.model';
   providedIn: 'root'
 })
 export class MovieService {
-  private apiUrl = 'http://localhost:3000/movies'; // Your mock server URL
+  private apiUrl = 'http://localhost:3000/movies';
 
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,15 @@ export class MovieService {
     return this.http.get<any>(this.apiUrl);
   }
 
+  getMovieById(movieId: string): Observable<Movie> {
+    return this.http.get<Movie>(`/api/movies/${movieId}`);
+  }
+
   addMovie(movie: Movie): Observable<Movie> {
     return this.http.post<Movie>(this.apiUrl, movie);
+  }
+
+  updateMovie(movieId: string, movie: Movie): Observable<Movie> {
+    return this.http.put<Movie>(`/api/movies/${movieId}`, movie);
   }
 }
