@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Movie } from '../../../models/movie.model';
-import { MovieService } from '../../services/movie.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-modify',
@@ -10,13 +7,5 @@ import { MovieService } from '../../services/movie.service';
   styleUrl: './modify.component.css'
 })
 export class ModifyComponent {
-  movie: Movie = { id: '0', title: '', realisator: '', releaseDate: new Date(), budget: 0, genre: '', status: '', synopsis: '' };
 
-  constructor(private movieService: MovieService) {}
-
-  modifyMovie(): void {
-    this.movieService.modifyMovie(this.movie).subscribe(response => {
-      console.log('Movie modified:', response);
-    });
-  }
 }

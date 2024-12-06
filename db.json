@@ -107,6 +107,15 @@
       "genre": "hola",
       "status": "hola",
       "synopsis": "hola"
+    },
+    {
+      "id": "eb7e",
+      "title": "hello",
+      "realisator": "hola",
+      "releaseDate": "2024-12-21",
+      "genre": "hallo",
+      "status": "salut",
+      "synopsis": "sjfhiwouhowrjfoiwejfoiwfjowiriwoerfjoiwefjiowf"
     }
   ]
 }

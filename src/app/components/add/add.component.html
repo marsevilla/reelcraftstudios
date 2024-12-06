@@ -8,34 +8,40 @@
       <small *ngIf="movieForm.get('title')?.errors?.['minlength']">Title must be at least 2 characters.</small>
     </div>
   </div>
+
   <div>
     <label for="realisator">Realisator</label>
     <input id="realisator" type="text" formControlName="realisator">
     <div *ngIf="movieForm.get('realisator')?.invalid && movieForm.get('realisator')?.touched">
-      <small>Realisator is required.</small>
+      <small *ngIf="movieForm.get('realisator')?.errors?.['required']">Realisator is required.</small>
+      <small *ngIf="movieForm.get('realisator')?.errors?.['minlength']">Realisator must be at least 2 characters.</small>
     </div>
   </div>
+
   <div>
     <label for="releaseDate">Release Date</label>
     <input id="releaseDate" type="date" formControlName="releaseDate">
     <div *ngIf="movieForm.get('releaseDate')?.invalid && movieForm.get('releaseDate')?.touched">
-      <small>Release Date is required.</small>
+      <small *ngIf="movieForm.get('releaseDate')?.errors?.['required']">Release Date is required.</small>
     </div>
   </div>
+
   <div>
     <label for="genre">Genre</label>
     <input id="genre" type="text" formControlName="genre">
     <div *ngIf="movieForm.get('genre')?.invalid && movieForm.get('genre')?.touched">
-      <small>Genre is required.</small>
+      <small *ngIf="movieForm.get('genre')?.errors?.['required']">Genre is required.</small>
     </div>
   </div>
+
   <div>
     <label for="status">Status</label>
     <input id="status" type="text" formControlName="status">
     <div *ngIf="movieForm.get('status')?.invalid && movieForm.get('status')?.touched">
-      <small>Status is required.</small>
+      <small *ngIf="movieForm.get('status')?.errors?.['required']">Status is required.</small>
     </div>
   </div>
+
   <div>
     <label for="synopsis">Synopsis</label>
     <textarea id="synopsis" formControlName="synopsis"></textarea>
@@ -44,5 +50,6 @@
       <small *ngIf="movieForm.get('synopsis')?.errors?.['minlength']">Synopsis must be at least 10 characters.</small>
     </div>
   </div>
+
   <button type="submit" [disabled]="movieForm.invalid">Add Movie</button>
 </form>
