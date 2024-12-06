@@ -25,9 +25,9 @@ export class ModifyComponent implements OnInit {
   ) {
     this.movieForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2)]],
-      director: ['', [Validators.required, Validators.minLength(2)]],
+      directors: [[], [Validators.required, Validators.minLength(2)]],
       budget: ['', [Validators.required, Validators.min(0)]],
-      realisator: ['', [Validators.required, Validators.minLength(2)]],
+      producers: [[], [Validators.required, Validators.minLength(2)]],
       releaseDate: ['', [Validators.required]],
       genre: ['', [Validators.required]],
       status: ['', [Validators.required]],
@@ -48,8 +48,15 @@ export class ModifyComponent implements OnInit {
   loadMovie(movieId: string): void {
     this.movieService.getMovieById(movieId).subscribe(
       (movie: Movie) => {
-        // Populate the form with the movie data
-        this.movieForm.patchValue(movie);
+        this.movieForm.patchValue({
+          title: movie.title,
+          producers: movie.producers?.[0] || '', // Use the first director if available
+          releaseDate: movie.release_date,
+          genre: movie.genre,
+          status: movie.status,
+          synopsis: movie.synopsis,
+          directors: movie.directors,
+        });
       },
       error => {
         console.error('Error fetching movie:', error);
@@ -57,6 +64,7 @@ export class ModifyComponent implements OnInit {
       }
     );
   }
+
 
   updateMovie(): void {
     if (this.movieForm.valid && this.movieId) {
