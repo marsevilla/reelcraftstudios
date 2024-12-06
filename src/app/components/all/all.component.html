@@ -1,0 +1,13 @@
+@for (movie of movies; track movie.id) {
+  <div>
+    <h2>{{ movie.title }}</h2>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <p><strong>Status:</strong> {{ movie.status }}</p>
+    <p><strong>Release Date:</strong> {{ movie.releaseDate }}</p>
+    <p><strong>Synopsis:</strong> {{ movie.synopsis }}</p>
+    <p><strong>Realisators:</strong> {{ movie.realisator}}</p>
+  </div>
+}
+@empty {
+  <p>Aucun film trouvé</p>
+}
