@@ -6,9 +6,15 @@
       "release_date": "2025-07-15",
       "budget": "200 million USD",
       "synopsis": "In a distant future, a team of explorers ventures into the unknown corners of the galaxy to find a new home for humanity.",
-      "directors": ["Jane Anderson"],
-      "producers": ["Michael Lee", "Sarah Connor"],
-      "status": "In Production"
+      "directors": [
+        "Jane Anderson"
+      ],
+      "producers": [
+        "Michael Lee",
+        "Sarah Connor"
+      ],
+      "status": "In Production",
+      "id": "a04c"
     },
     {
       "title": "Love in the Chaos",
@@ -16,9 +22,14 @@
       "release_date": "2024-03-10",
       "budget": "35 million USD",
       "synopsis": "A couple fights to rebuild their relationship amidst the chaos of a global crisis.",
-      "directors": ["Emma Roberts"],
-      "producers": ["Jack Martin"],
-      "status": "Postproduction"
+      "directors": [
+        "Emma Roberts"
+      ],
+      "producers": [
+        "Jack Martin"
+      ],
+      "status": "Postproduction",
+      "id": "1af2"
     },
     {
       "title": "The Last Heist",
@@ -26,9 +37,15 @@
       "release_date": "2024-12-20",
       "budget": "50 million USD",
       "synopsis": "A group of retired thieves comes out of retirement for one final job, only to find out they're being double-crossed.",
-      "directors": ["Luke Carter"],
-      "producers": ["Diana Stone", "Rick Sanchez"],
-      "status": "Completed"
+      "directors": [
+        "Luke Carter"
+      ],
+      "producers": [
+        "Diana Stone",
+        "Rick Sanchez"
+      ],
+      "status": "Completed",
+      "id": "f791"
     },
     {
       "title": "Laughing Matters",
@@ -36,9 +53,14 @@
       "release_date": "2025-05-01",
       "budget": "20 million USD",
       "synopsis": "A failing stand-up comedian accidentally becomes an internet sensation.",
-      "directors": ["Chris Young"],
-      "producers": ["Megan Fox"],
-      "status": "Pre-production"
+      "directors": [
+        "Chris Young"
+      ],
+      "producers": [
+        "Megan Fox"
+      ],
+      "status": "Pre-production",
+      "id": "0d85"
     },
     {
       "title": "Eclipse",
@@ -46,9 +68,35 @@
       "release_date": "2024-10-31",
       "budget": "80 million USD",
       "synopsis": "A solar eclipse triggers a series of murders in a small town, and a detective races against time to solve the mystery.",
-      "directors": ["Sophia Grant"],
-      "producers": ["Oliver Blake", "Nina Harper"],
-      "status": "In Production"
+      "directors": [
+        "Sophia Grant"
+      ],
+      "producers": [
+        "Oliver Blake",
+        "Nina Harper"
+      ],
+      "status": "In Production",
+      "id": "e4a8"
+    },
+    {
+      "id": "0",
+      "title": "holahola",
+      "realisator": "hollahola",
+      "releaseDate": "2024-12-19",
+      "budget": 0,
+      "genre": "hola",
+      "status": "",
+      "synopsis": "hola"
+    },
+    {
+      "id": "0",
+      "title": "hola",
+      "realisator": "hello",
+      "releaseDate": "2025-01-01",
+      "budget": 0,
+      "genre": "drama",
+      "status": "onprod",
+      "synopsis": "bonjour"
     }
   ]
 }

@@ -4,8 +4,8 @@ export interface Movie {
   title: string;
   genre: string;
   status: string;
-  releaseDate: Date;
-  synopsis: string;
+  releaseDate: Date
   realisator: string;
   budget: number;
+  synopsis: string;
 }
